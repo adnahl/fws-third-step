@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 
-export default function Projects() {
+export default function ProjectsPage() {
   return (
     <div>
       <h2>Projects</h2>

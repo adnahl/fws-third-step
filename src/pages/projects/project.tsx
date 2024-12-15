@@ -2,7 +2,7 @@ import Hero from '@/components/header/hero'
 import { projects } from '@/db/projects'
 import { redirect, useParams } from 'react-router'
 
-export default function Project() {
+export default function ProjectPage() {
   const { pid } = useParams()
 
   if (!pid) redirect('/')

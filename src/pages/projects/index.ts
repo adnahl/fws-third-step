@@ -1,2 +1,2 @@
 export { default } from './projects'
-export { default as Project } from './project'
+export { default as ProjectPage } from './project'
