@@ -1,11 +1,11 @@
 import MainRoutes from '@/routes/main-routes'
+import Nav from '@c/header/nav'
 
-function App() {
+export default function App() {
   return (
     <>
+      <Nav />
       <MainRoutes />
     </>
   )
 }
-
-export default App
