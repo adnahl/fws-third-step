@@ -1,8 +1,10 @@
+import MainRoutes from '@/routes/main-routes'
+
 function App() {
   return (
-    <main>
-      <p>H to learn more</p>
-    </main>
+    <>
+      <MainRoutes />
+    </>
   )
 }
 
