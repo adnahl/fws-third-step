@@ -6,9 +6,9 @@ export default function Hero({
   description?: string
 }) {
   return (
-    <header className='px-8 py-16 bg-accent space-y-2'>
+    <header className='px-8 py-16 bg-accent space-y-4'>
       <h1 className='text-6xl font-bold'>{title}</h1>
-      <p>{description}</p>
+      <p className='opacity-80'>{description}</p>
     </header>
   )
 }
