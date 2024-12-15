@@ -18,7 +18,7 @@ export default function Project() {
   return (
     <section>
       <h2>{project.name}</h2>
-      <p>{pid}</p>
+      <p>{project.id}</p>
     </section>
   )
 }

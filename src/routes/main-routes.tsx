@@ -1,7 +1,7 @@
 import MainLayout from '@/components/layout/main-layout'
 import HomePage from '@/pages/home'
 import PageNotFound from '@/pages/page-not-found'
-import Project from '@/pages/projects/project'
+import Projects, { Project } from '@/pages/projects'
 import { Routes, Route } from 'react-router'
 
 export default function MainRoutes() {
@@ -9,6 +9,7 @@ export default function MainRoutes() {
     <Routes>
       <Route element={<MainLayout />}>
         <Route path='projects'>
+          <Route index element={<Projects />} />
           <Route path=':pid' element={<Project />} />
         </Route>
         <Route path='/' index element={<HomePage />} />
