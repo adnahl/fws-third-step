@@ -54,6 +54,14 @@ export default {
       fontFamily: {
         poppins: ['"Poppins"', 'sans-serif'],
         ubuntu: ['"Ubuntu Mono"', 'monospace']
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            'code::before': { content: 'none' },
+            'code::after': { content: 'none' }
+          }
+        }
       }
     }
   },
