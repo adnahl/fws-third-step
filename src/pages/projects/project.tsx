@@ -1,4 +1,5 @@
 import Hero from '@/components/header/hero'
+import MDRender from '@/components/md/md-render'
 import { projects } from '@/db/projects'
 import { redirect, useParams } from 'react-router'
 
@@ -14,12 +15,12 @@ export default function ProjectPage() {
     return <p className='text-destructive'>Project not found</p>
   }
 
-  const { name, description, body } = project
+  const { name, description, bodyPath } = project
 
   return (
-    <section>
+    <section className='space-y-8'>
       <Hero title={name} description={description} />
-      <p>{body}</p>
+      <MDRender mdPath={bodyPath} />
     </section>
   )
 }
