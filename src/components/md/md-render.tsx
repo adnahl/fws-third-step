@@ -4,7 +4,13 @@ import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-export default function MDRender({ mdPath }: { mdPath: string }) {
+export default function MDRender({
+  mdPath,
+  showDiff = true
+}: {
+  mdPath: string
+  showDiff?: boolean
+}) {
   const [markdownContent, setMarkdownContent] = useState('')
 
   useEffect(() => {
@@ -33,6 +39,8 @@ export default function MDRender({ mdPath }: { mdPath: string }) {
           code(props) {
             const { children, className, ...rest } = props
             const match = /language-(\w+)/.exec(className || '')
+            const str = String(children).replace(/\n$/, '')
+            const strArr = str.split('\n')
             return match ? (
               <SyntaxHighlighter
                 // {...rest}
@@ -41,8 +49,22 @@ export default function MDRender({ mdPath }: { mdPath: string }) {
                 language={match[1]}
                 showLineNumbers
                 wrapLongLines
+                customStyle={{}}
+                lineProps={(lineNumber: number) => {
+                  if (!showDiff) return {}
+                  const line = strArr[lineNumber - 1].trim()
+                  return {
+                    style: {
+                      backgroundColor: line.startsWith('+')
+                        ? 'rgba(0,255,0,0.1)'
+                        : line.startsWith('-')
+                        ? 'rgba(255,0,0,0.1)'
+                        : 'inherit'
+                    }
+                  }
+                }}
               >
-                {String(children).replace(/\n$/, '')}
+                {str}
               </SyntaxHighlighter>
             ) : (
               <code
