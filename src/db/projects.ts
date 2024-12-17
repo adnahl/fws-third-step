@@ -8,8 +8,9 @@ export type tProject = {
 export const projects: tProject[] = [
   {
     id: '1',
-    name: 'Project One',
-    description: 'This is project one',
+    name: 'Retrospected',
+    description:
+      'Retrospected is an open-source web application designed for agile retrospectives.',
     bodyPath: '/src/assets/projects/p1.md'
   },
   {
