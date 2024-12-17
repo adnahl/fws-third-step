@@ -49,12 +49,12 @@ export default function MDRender({
                 language={match[1]}
                 showLineNumbers
                 wrapLongLines
-                customStyle={{}}
                 lineProps={(lineNumber: number) => {
                   if (!showDiff) return {}
                   const line = strArr[lineNumber - 1].trim()
                   return {
                     style: {
+                      width: 'fit-content',
                       backgroundColor: line.startsWith('+')
                         ? 'rgba(0,255,0,0.1)'
                         : line.startsWith('-')
