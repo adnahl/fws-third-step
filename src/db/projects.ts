@@ -15,8 +15,8 @@ export const projects: tProject[] = [
   },
   {
     id: '2',
-    name: 'Project Two',
-    description: 'This is project two',
+    name: 'React-Markdown',
+    description: 'React component to render markdown.',
     bodyPath: '/src/assets/projects/p2.md'
   }
 ]
