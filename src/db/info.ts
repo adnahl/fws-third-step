@@ -16,10 +16,22 @@ export const challenge = {
 
 export const solution = {
   title: 'Solution',
-  description: []
+  description: [
+    'My solution for this challenge consists of two projects.',
+    'The first project focuses on the frontend, where I aim to enhance both the style and functionality.',
+    'The second project is more like a brief commentary on why I believe Node.js projects should migrate from JavaScript to TypeScript, even if they are currently using JSDoc for type annotations.',
+    'Additionally, I will use this web application to present the challenge. The code is available for review if needed.'
+  ]
 }
 
 export const process = {
   title: 'Process',
-  description: []
+  description: [
+    '1. Identify an open source web application.',
+    '2. Analyze the application to find well-written and poorly written areas.',
+    '3. Document the reasons why certain areas are good or not good.',
+    '4. Select one poorly written area and refactor or rewrite it.',
+    '5. Document the changes made and the reasons behind them.',
+    '6. Prepare a presentation to showcase the application, highlighting well-written areas, poorly written areas, and the refactored code.'
+  ]
 }
