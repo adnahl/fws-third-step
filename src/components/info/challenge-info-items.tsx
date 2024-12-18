@@ -27,8 +27,8 @@ export default function ChallengeInfoItems() {
             <strong>{endDate}</strong>
           </p>
         </InfoRender>
-        <InfoRender title={process.title} description={process.description} />
         <InfoRender title={solution.title} description={solution.description} />
+        <InfoRender title={process.title} description={process.description} />
       </div>
     </div>
   )
