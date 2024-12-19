@@ -15,6 +15,7 @@ export default function MainRoutes() {
           <Route path=':pid/:did' element={<DemosPage />} />
         </Route>
         <Route path='/' index element={<HomePage />} />
+        <Route path='/*' element={<HomePage />} />
         <Route path='*' element={<PageNotFound />} />
       </Route>
     </Routes>
