@@ -4,6 +4,8 @@ import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
+const isDev = process.env.NODE_ENV === 'production'
+
 export default function MDRender({
   mdPath,
   showDiff = true
@@ -16,7 +18,11 @@ export default function MDRender({
   useEffect(() => {
     const fetchMarkdown = async () => {
       try {
-        const response = await fetch(mdPath)
+        const path = isDev
+          ? mdPath
+          : `https://raw.githubusercontent.com/adnahl/fws-third-step/refs/heads/main${mdPath}`
+
+        const response = await fetch(path)
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }
