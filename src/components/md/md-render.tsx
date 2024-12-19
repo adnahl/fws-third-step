@@ -18,9 +18,7 @@ export default function MDRender({
   useEffect(() => {
     const fetchMarkdown = async () => {
       try {
-        const path = isDev
-          ? mdPath
-          : `https://raw.githubusercontent.com/adnahl/fws-third-step/refs/heads/main${mdPath}`
+        const path = isDev ? mdPath : import.meta.env.BASE_URL + mdPath
 
         const response = await fetch(path)
         if (!response.ok) {
