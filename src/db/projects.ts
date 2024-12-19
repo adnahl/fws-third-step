@@ -3,6 +3,7 @@ export type tProject = {
   name: string
   description: string
   bodyPath: string
+  demosIds?: string[]
 }
 
 export const projects: tProject[] = [
@@ -11,7 +12,8 @@ export const projects: tProject[] = [
     name: 'Retrospected',
     description:
       'Retrospected is an open-source web application designed for agile retrospectives.',
-    bodyPath: '/src/assets/projects/p1.md'
+    bodyPath: '/src/assets/projects/p1.md',
+    demosIds: ['1']
   },
   {
     id: '2',
