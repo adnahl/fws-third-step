@@ -15,5 +15,6 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
       '@c': path.resolve(__dirname, 'src/components')
     }
-  }
+  },
+  base: '/fws-third-step/'
 })
