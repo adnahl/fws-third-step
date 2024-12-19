@@ -17,7 +17,11 @@ export default function MDRender({
     const fetchMarkdown = async () => {
       try {
         const mdp = import.meta.env.BASE_URL + mdPath
-        const response = await fetch(mdp)
+        const response = await fetch(mdp, {
+          headers: { 'Content-Type': 'text/markdown' },
+          method: 'GET',
+          mode: 'no-cors'
+        })
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }
