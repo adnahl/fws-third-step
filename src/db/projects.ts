@@ -12,13 +12,13 @@ export const projects: tProject[] = [
     name: 'Retrospected',
     description:
       'Retrospected is an open-source web application designed for agile retrospectives.',
-    bodyPath: '/src/assets/projects/p1.md',
+    bodyPath: '/projects/p1.md',
     demosIds: ['1']
   },
   {
     id: '2',
     name: 'React-Markdown',
     description: 'React component to render markdown.',
-    bodyPath: '/src/assets/projects/p2.md'
+    bodyPath: '/projects/p2.md'
   }
 ]
